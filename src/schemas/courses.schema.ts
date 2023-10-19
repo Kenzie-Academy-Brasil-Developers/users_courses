@@ -8,3 +8,4 @@ export const coursesSchema = z.object({
 export const  courseCreateSchema = coursesSchema.omit({
     id: true
 })
+export const courseReturnSchema = coursesSchema
