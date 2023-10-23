@@ -19,5 +19,5 @@ export const userIncourseController = async (req: Request, res: Response): Promi
 
 export const deleteUserCourseController = async (req: Request, res: Response): Promise<Response> => {
   const developer = await deleteUserCurse(req.params.courseId, req.params.userId)
-  return res.status(200).json(developer)
+  return res.status(204).json(developer)
 }   

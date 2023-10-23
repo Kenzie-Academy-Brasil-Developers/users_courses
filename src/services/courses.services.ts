@@ -61,7 +61,7 @@ export const deleteUserCurse = async (courseId: string, userId: string) => {
     const queryString: string = `
     UPDATE "userCourses"
     SET "active" = false
-    WHERE "id" = $1;
+    WHERE "courseId" = $1 and "userId" = $2;
     `
     await client.query(queryString, [courseId, userId])
 }

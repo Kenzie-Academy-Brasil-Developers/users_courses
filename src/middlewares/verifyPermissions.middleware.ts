@@ -8,7 +8,7 @@ export const verifyPermissions = (req: Request, res: Response, next: NextFunctio
         return next()
     }
 
-    if(decoded.sub !== req.params.id) {
+    if(decoded.sub !== req.params.userId) {
         throw new AppError("Insufficient permission", 403)
     }
 

@@ -4,7 +4,7 @@ import { ZodError } from "zod";
 import { JsonWebTokenError } from "jsonwebtoken";
 
 export const handleErrors = (error: unknown, req: Request, res: Response, next: NextFunction) => {
-    console.log(error)
+    
     if(error instanceof AppError){
         return res.status(error.status).json({message: error.message})
     }
